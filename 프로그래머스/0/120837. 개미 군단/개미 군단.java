@@ -1,17 +1,15 @@
 class Solution {
     public int solution(int hp) {
-        int general = 5;
-        int soldier = 3;
-        int worker = 1;
+        int answer = 0;
         
-        int numGeneral = hp / general;
-        hp %= general;
+        answer += hp/5;
+        hp %= 5;
         
-        int numSoldier = hp / soldier;
-        hp %= soldier;
+        answer += hp/3;
+        hp %= 3;
         
-        int numWorker = hp / worker;
+        answer += hp/1;
         
-        return numGeneral + numSoldier + numWorker;
+        return answer;
     }
 }
